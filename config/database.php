@@ -41,12 +41,11 @@ return [
         ],
 
         'mysql' => [
-            'host' => getenv('DB_HOST'),
             'read' => [
-                'host' => getenv('DB_READ_HOST')
+                'host' => [getenv('DB_READ_HOST')]
             ],
             'write' => [
-                'host' => getenv('DB_WRITE_HOST')
+                'host' => [getenv('DB_WRITE_HOST')]
             ],
             'driver' => 'mysql',
             'port' => env('DB_PORT', '3306'),
