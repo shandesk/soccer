@@ -41,6 +41,7 @@ return [
         ],
 
         'mysql' => [
+            'host' => getenv('DB_HOST'),
             'read' => [
                 'host' => getenv('DB_READ_HOST')
             ],
