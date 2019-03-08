@@ -52,7 +52,7 @@ class TeamController extends Controller
             return Redirect::to(route('adminTeam'));
         }
 
-        if(isset($request->logo) && $team->logoUri != 'team/default.jpg')
+        if(isset($request->logo) && $team->logoUri != 'team/default.png')
         {
            unlinkFile($request->logo);
        }
