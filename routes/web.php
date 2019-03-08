@@ -10,6 +10,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+foreach (File::allFiles(resource_path('routes')) as $partial)
+	{
+		require_once $partial->getPathname();
+	}
