@@ -15,22 +15,25 @@ class PageController extends Controller
 {
 	public function index()
 	{ 
-		$request = Request::create('/api/teams/8', 'GET');
+		$request = Request::create(route('apiTeams'), 'GET');
 		$teams = json_decode(Route::dispatch($request)->getContent());
 		return view('views.guest.app.index',compact('teams'));
 	}
 
 	public function team()
 	{ 
-		$request = Request::create('/api/teams', 'GET');
+		$request = Request::create(route('apiTeams'), 'GET');
 		$teams = json_decode(Route::dispatch($request)->getContent());
 		return view('views.guest.app.team',compact('teams'));
 	}
 
 	public function player($team)
 	{ 
-		$request = Request::create('/api/team/'.$team.'/players', 'GET');
+		$request = Request::create(route('apiShowPlayers',['id'=>$team]), 'GET');
 		$players = json_decode(Route::dispatch($request)->getContent());
+		if (isset($players->message)) {
+			abort(404);
+		}
 		return view('views.guest.app.player',compact('players'));
 	}
 
