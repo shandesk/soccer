@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 $versions = array('v1');
 
 foreach ($versions as $key => $version) {
-	foreach (File::allFiles(resource_path('api/'.$version)) as $partial)
+	foreach (File::allFiles(resource_path('routes/api/'.$version)) as $partial)
 		{
 			require_once $partial->getPathname();
 		}
