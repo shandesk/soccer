@@ -18,7 +18,7 @@ class TeamResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'logo' => $this->logoUri,
-            'uri' => url('api/team/'.$this->id.'/players'),
+            'uri' => url('api/v1/teams/'.$this->id),
         ];
     }
 }

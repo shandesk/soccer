@@ -27,22 +27,16 @@
 				<!-- Block Content -->
 				<div class="block block-rounded block-themed block-shadow animated fadeIn">
 					<div class="block-content">
-						<p class="lead">Get Limited Teams Through this api</p>
-						<div class="nice-copy push">
-							<p>
-								<a href="{{ url('api/teams/{LIMIT}') }}">{{ url('api/teams/{LIMIT}') }}</a>
-							</p>
-						</div>
 						<p class="lead">Get Complete Team Through this api</p>
 						<div class="nice-copy push">
 							<p>
-								<a href="{{ url('api/teams') }}">{{ url('api/teams') }}</a>
+								<a href="{{ route('apiTeams') }}">{{ route('apiTeams') }}</a>
 							</p>
 						</div>
 						<p class="lead">Get Complete Team Players Through this api</p>
 						<div class="nice-copy push">
 							<p>
-								<a href="{{ url('api/team/{TEAMID}/players') }}">{{ url('api/team/{TEAMID}/players') }}</a>
+								<a href="{{ route('apiShowPlayers',['id'=>'TEAMID']) }}">{{ route('apiShowPlayers',['id'=>'TEAMID']) }}</a>
 							</p>
 						</div>
 					</div>
