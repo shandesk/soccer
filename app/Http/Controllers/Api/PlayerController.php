@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 // Repository Import
 use App\Repository\Api\PlayerRepository;
+// Resource Import
 use App\Http\Resources\PlayerResource;
 
 class PlayerController extends Controller

@@ -4,9 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Redirect;
 // Request Import
 use App\Http\Requests\Admin\PlayerRequest;

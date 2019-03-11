@@ -6,10 +6,7 @@ namespace App\Http\Controllers\Guest;
 use Illuminate\Http\Request;
 // Controllers Import
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-// Repositories Import
-use App\Repository\Guest\TeamRepository;
 
 class PageController extends Controller
 {
