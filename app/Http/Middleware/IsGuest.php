@@ -19,7 +19,7 @@ class IsGuest
     public function handle($request, Closure $next)
     {
         if (Auth::check()) {
-            return Redirect::to(route('adminDashboard'));
+            return Redirect::to(route('adminTeam'));
         }
 
         return $next($request);
