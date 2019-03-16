@@ -25,7 +25,7 @@ class TeamTest extends TestCase
     	$this->assertAuthenticatedAs($user);
 
         // 2. Create Team
-    	$response = $this->from('/admin/teams')->post('/admin/team/create',['name' => "New Product"]);
+    	$response = $this->from('/admin/teams')->post('/admin/team/create',['name' => "Devon"]);
     	$response->assertStatus(302);
     	$response->assertRedirect('admin/teams');
     }
